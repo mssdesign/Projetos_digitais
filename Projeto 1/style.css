@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;    
+}
+
+.box {
+    background-color: #157bad;
+    height: 300px;
+    width: 300px;
+    transition-property: background-color, border-radius;
+    transition-duration: 2s;
+    /* transition-delay: 1s; */    
+	transition-timing-function: cubic-bezier(.15,.89,.85,.26);
+}
+
+.box:hover {
+    background-color: #ec5840;
+    border-radius: 50%;
+}
