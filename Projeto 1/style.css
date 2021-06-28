@@ -5,23 +5,25 @@
 }
 
 body {
+    animation: gradient 10s alternate ease infinite;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab) no-repeat;
+    background-size: 300% 300%;
+    font-family: sans-serif;
     display: flex;
+    color: #fff;
+    font-size: 200%;
     align-items: center;
     justify-content: center;
-    height: 100vh;    
+    height: 100vh;
+    overflow: hidden;    
 }
 
-.box {
-    background-color: #157bad;
-    height: 300px;
-    width: 300px;
-    transition-property: background-color, border-radius;
-    transition-duration: 2s;
-    /* transition-delay: 1s; */    
-	transition-timing-function: cubic-bezier(.15,.89,.85,.26);
-}
+@keyframes gradient {
+    from {
+        background-position: 0 50%;
+    }
 
-.box:hover {
-    background-color: #ec5840;
-    border-radius: 50%;
+    to {
+        background-position: 100% 50%;
+    }
 }
