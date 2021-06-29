@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    animation: is-bouncing 1s ease infinite;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    overflow: hidden; 
+}
+
+svg {
+    width: 600px;
+}
+
+@keyframes is-bouncing {
+    to {
+        transform: translateY(60px);
+    }
+}
