@@ -16,9 +16,24 @@
       "price": 5000.89
     },
     {
-      "name": "geladeira",
-      "price": "5000.00",
+      "name": "Veio do Formulário",
+      "price": "9.99",
       "id": 4
+    },
+    {
+      "name": "Geladeira'",
+      "price": "1899.44",
+      "id": 5
+    },
+    {
+      "name": "TV de plasma",
+      "price": "85000",
+      "id": 6
+    },
+    {
+      "name": "Arroz",
+      "price": "25",
+      "id": 7
     }
   ]
 }
