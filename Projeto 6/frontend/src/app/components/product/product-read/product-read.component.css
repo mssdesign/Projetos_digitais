@@ -1,0 +1,19 @@
+table {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+i.edit {
+    color: #c3c3c3;
+}
+
+i.delete {
+    color: #f00;
+    margin-left: 10%;
+    position: absolute;
+}
+
+a {
+    cursor: pointer;
+}
