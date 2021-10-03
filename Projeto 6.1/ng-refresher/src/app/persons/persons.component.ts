@@ -7,7 +7,6 @@ import { Component, OnInit } from "@angular/core";
 })
 export class PersonsComponent implements OnInit {
     personList!: string[];
-    inputPerson!: any;
 
     constructor(private prsService: PersonService) {}
 
