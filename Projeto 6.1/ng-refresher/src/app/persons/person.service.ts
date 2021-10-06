@@ -1,3 +1,4 @@
+import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Subject } from 'rxjs';
 
@@ -5,7 +6,13 @@ import { Subject } from 'rxjs';
 export class PersonService {
     pessoasAlteração = new Subject<string[]>();
 
-    persons: string[] = ['Max', 'Manuel', 'Anna'];
+    persons!: string[];
+
+    constructor(private http: HttpClient) {};
+
+    fetchPersons() {
+        this.http.get<any>('https://swapi.dev/api/people').subscribe(resData => console.log(resData));
+    }
 
     addPessoa(name: string) {
         this.persons.push(name)
