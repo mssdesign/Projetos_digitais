@@ -7,14 +7,14 @@ import { Subject } from 'rxjs';
 export class PersonService {
     pessoasAlteração = new Subject<string[]>();
 
-    persons!: string[];
+    persons: string[] = ['Ana', 'Marcos', 'Eu'];
 
     constructor(private http: HttpClient) {};
 
     fetchPersons() {
         this.http.get<any>('https://swapi.dev/api/people').pipe(map(resData => {
-            return resData.results
-        })).subscribe(DadoFinal => console.log(DadoFinal));
+            return resData.results.map((personagem: { name: string; }) => personagem.name);
+        })).subscribe(DadoFinal => this.pessoasAlteração.next(DadoFinal));
     }
 
     addPessoa(name: string) {
