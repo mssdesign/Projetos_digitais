@@ -1,0 +1,6 @@
+{
+	"appId": "com.example.app",
+	"appName": "ionic_course",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
