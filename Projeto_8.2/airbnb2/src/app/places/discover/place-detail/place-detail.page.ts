@@ -1,4 +1,6 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-place-detail',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlaceDetailPage implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router, private navCtrl: NavController) { }
 
-  ngOnInit() {
+  ngOnInit() { }
+
+  onBookPlace() {
+    //this.router.navigateByUrl('/places/tabs/discover'); //Animação errada
+    //this.navCtrl.pop(); //Só funciona se tiver página anterior
+    this.navCtrl.navigateBack('/places/tabs/discover');
   }
 
 }
