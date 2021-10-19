@@ -2,7 +2,7 @@
   <ion-toolbar>
     <ion-title>{{ placeEdit.title }}</ion-title>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/places/tabs/offers"></ion-back-button>
+      <ion-back-button [defaultHref]="'/places/tabs/offers/' + placeEdit.id"></ion-back-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
