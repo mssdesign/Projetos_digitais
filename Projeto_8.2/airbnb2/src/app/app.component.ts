@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-root',
@@ -7,8 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  constructor() {}
+  constructor(private menuCtr: MenuController) {}
 
   onLogout() {}
+
+  closeMenu() {
+    this.menuCtr.close('m1')
+  }
   
 }
