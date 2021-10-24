@@ -16,6 +16,7 @@ import { PlaceDetailPage } from './place-detail.page';
     IonicModule,
     PlaceDetailPageRoutingModule
   ],
-  declarations: [PlaceDetailPage, CreateBookingComponent]
+  declarations: [PlaceDetailPage, CreateBookingComponent],
+  entryComponents: [CreateBookingComponent]
 })
 export class PlaceDetailPageModule {}
