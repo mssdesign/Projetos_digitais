@@ -1,7 +1,0 @@
-{
-  "name": "ionic_course",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular"
-}
