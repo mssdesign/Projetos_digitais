@@ -17,15 +17,17 @@ export class AuthPage implements OnInit {
   }
 
   onLogin() {
+    this.isLoading = true;
     this.authService.login();
     this.loadingCtrl.create({keyboardClose: true, message: 'Loggin in...'}).then(loadingEl => {
       loadingEl.present();
-    });
-    this.isLoading = true;
-    setTimeout(() => {
-      this.isLoading = false;
-      this.router.navigateByUrl('/places/tabs/discover');
-    }, 1500);
-  }
 
+      setTimeout(() => {
+        this.isLoading = false;
+        loadingEl.dismiss();
+        this.router.navigateByUrl('/places/tabs/discover');
+      }, 1500);
+
+    });    
+  }
 }
