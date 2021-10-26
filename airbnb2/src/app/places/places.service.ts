@@ -37,7 +37,7 @@ export class PlacesService {
       'In the middle of nowhere.', 
       'https://cdn.pixabay.com/photo/2017/01/09/00/49/snow-1964361_960_720.jpg', 
       55.00
-    ),
+    )
   ];
 
   get places() {
